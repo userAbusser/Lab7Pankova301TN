@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення товару</title>
+</head>
+
+<body>
+
+    <style>
+        div {
+            margin-bottom: 20px;
+        }
+    </style>
+    <h1 align="center">Замовлення товару</h1>
+    <form action="" name="myForm" onsubmit="submitForm(event)">
+
+        <div>
+            <figure>
+                <label for="bankCount">Номер банківського рахунку</label>
+                <input type="text" id="bankCount">
+            </figure>
+        </div>
+
+        <div>
+            <figure>
+                <label for="userCab">Особистий номер користувача</label>
+                <input type="text" id="userCab">
+            </figure>
+        </div>
+
+        <div>
+            <figure>
+                <label for="itemsList">Список товарів:</label></br>
+                <input type="checkbox">Крісло</br>
+                <input type="checkbox">Ноутбук</br>
+                <input type="checkbox">Зеркало</br>
+                <input type="checkbox">Настільна гра
+            </figure>
+        </div>
+
+        <div>
+            <figure>
+                <figcaption>Коментар</figcaption>
+                <textarea name="comm" id="comm" cols="30" rows="10"></textarea>
+            </figure>
+        </div>
+
+        <div>
+            <figure>
+                <label for="payment">Вид оплати:</label><br>
+                <input type="radio" name="pay" id="payment">Готівковий</br>
+                <input type="radio" name="pay" id="payment">Безготівковий
+            </figure>
+        </div>
+
+        <div>
+            <figure>
+                <figcaption>Вкажіть яку додаткову інформацію ви бажаєте одержати при відповіді</figcaption>
+                <input type="checkbox" name="feedback">Дані про залишки на рахунку</br>
+                <input type="checkbox" name="feedback">Список останніх виплат по рахунку
+            </figure>
+        </div>
+
+        <div>
+            <figure><input type="submit" />Замовити товар</figure>
+        </div>
+    </form>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Запобігаємо відправці форми
+
+            // Код  для обробки форми
+
+            // Відкриваємо нову сторінку
+            window.open("test.html", "_blank");
+
+            // Перехід на попередню сторінку
+            setTimeout(function () {
+                window.history.back();
+            }, 2000); // Затримка 2 секунди
+        }
+    </script>
+</body>
+
+</html>
